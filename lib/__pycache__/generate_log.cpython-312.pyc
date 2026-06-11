@@ -1,0 +1,17 @@
+Ë
+    {>$jÉ  ã                   óB   — d dl m Z  d dlZd„ Zedk(  r
+g d¢Z ee«       yy)é    )ÚdatetimeNc                 ó   — t        | t        «      s
+t        d«      ‚dt         j                  «       j
+                  d«      › d}t
+        |d«      5 }| D ]  }|j                  |› d«       Œ 	 d d d «       t        d |› «       |S # 1 sw Y   ŒxY w)Nzdata must be a list.Úlog_z%Y%m%dz.txtÚwú
+zLog written to )	Ú
+isinstanceÚlistÚ
+ValueErrorr   ÚnowÚstrftimeÚopenÚwriteÚprint)ÚdataÚfilenameÚfileÚentrys       ú[/home/penzi-mbuthia/ft-17/mod4/course-7-module-6-pip-pypi-scripting-lab/lib/generate_log.pyÚgenerate_logr      s”   € ä
+dœDÔ
+!ÜÐ/Ó0Ð0ð ”h—l‘l“n×-Ñ-¨hÓ7Ð8¸Ð=€Hô 
+ˆh˜Ó	ð % Øò 	%ˆEØJ‰J˜%˜ |Õ$ñ	%÷%ô
+ 
+ˆO˜H˜:Ð
+&Ô'à
+€O÷%ð %ús   ÁBÂB
+ Ú__main__)zUser logged inzUser updated profilezReport exported)r   Úosr   Ú__name__Úlog_data© ó    r   ú<module>r      s,   ðÝ Û 	òð& ˆzÒÚL€HÙÕð r   
