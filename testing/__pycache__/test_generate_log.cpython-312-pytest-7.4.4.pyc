@@ -1,0 +1,57 @@
+Ë
+    Ë)ji  ã                   ó¬   — d dl Zd dlmc mZ d dlZd dl Z d dlmZ d dl	m	Z	 e j                  d„ «       Z
+e j                  d„ «       Zd„ Z
+d „ Zd„ Zd	„ Zd
+„ Zy)
+é    N)Údatetime)Úgenerate_logc                  ó
+   — g d¢S )N)z	Entry onez	Entry twoz
+Entry three© r   ó    úd/home/penzi-mbuthia/ft-17/mod4/course-7-module-6-pip-pypi-scripting-lab/testing/test_generate_log.pyÚlog_datar	      s   € â
+4Ð4r    c              #   ó”   K  — t        | «      }|–— t        j                  j                   |«      rt        j                  |«       y y ­w)N)r   ÚosÚpathÚexistsÚremove)r	   Úfilenames     r   Úgenerated_filer      s6   è ø€ ä˜HÓ%€HØ
+‚NÜ 	‡ww‡~~hÔ Ü
+	‰	(Õð  ùs   ‚AAc                 ód  — t         j                  }|j                  } || «      }|st         j                  | › d«      dz   dt
+        j                  «       v st         j                  t         «      rt         j                  t         «      ndt         j                  |«      t         j                  |«      dt
+        j                  «       v st         j                  | «      rt         j                  | «      ndt         j                  |«      dœz  }t        t         j                  |«      «      ‚dx}x}}y) zDTest that the log file is created with today's date in the filename.z
+ not found.zd
+>assert %(py7)s
+{%(py7)s = %(py4)s
+{%(py4)s = %(py2)s
+{%(py2)s = %(py0)s.path
+}.exists
+}(%(py5)s)
+}r
+   r   )Úpy0Úpy2Úpy4Úpy5Úpy7N)
+r
+   r   r
+   Ú
+@pytest_arÚ_format_assertmsgÚ@py_builtinsÚlocalsÚ_should_repr_global_nameÚ	_safereprÚAssertionErrorÚ_format_explanation)r   Ú
+@py_assert1Ú
+@py_assert3Ú
+@py_assert6Ú
+@py_format8s        r   Útest_log_file_createdr#      sw   € çI×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×I×IÐIr    c                  óÊ  — t        j                  «       j                  d«      }d|› d}| |k(  }|s¯t         j                  d|fd| |f«      dt
+        j                  «       v st         j                  | «      rt         j                  | «      ndt         j                  |«      d œz  }t         j                  d«      d	z   d
+|iz  }t        t         j                  |«      «      ‚d
+x}}y
+)z>Test that the filename follows the expected naming convention.z%Y%m%dÚlog_z.txt©ú==©z%(py0)s == %(py3)sr   ©r   Úpy3z(Filename does not match expected format.z
+>assert %(py5)sr   N)r   ÚnowÚstrftimer   Ú_call_reprcomparer   r   r   r   r   r   r   )r   ÚtodayÚ
+@py_assert2r   Ú
+@py_format4Ú
+@py_format6s         r   Útest_log_file_name_formatr2      sc   € äL‰L‹N×#Ñ# HÓ-€Eß[×[×[×[×[×[×[×[×[×[×[×[×[×[×[×[×[×[×[×[×[×[×[×[Ð[r    c                  óp  — t        | d«      5 }|j                  «       D cg c]  }|j                  «       ‘Œ }}ddd«       |k(  }|sÜt         j                  d|fd||f«      dt
+        j                  «       v st         j                  |«      rt         j                  |«      nddt
+        j                  «       v st         j                  |«      rt         j                  |«      ndd œz  }t         j                  d«      d	z   d
+|iz  } t        t         j                  | «      «      ‚d}yc c}w # 1 sw Y   ŒôxY w)
+z@Test that the content written to the log matches the input list.ÚrNr&   )z%(py0)s == %(py2)sÚlinesr	   )r   r   z*Log file contents do not match input data.z
+>assert %(py4)sr   )ÚopenÚ	readlinesÚstripr   r-   r   r   r   r   r   r   r   )r   r	   ÚfileÚliner5   r   Ú
+@py_format3Ú
+@py_format5s           r   Ú#test_log_file_content_matches_inputr=      sŸ   € ä	
+ˆn˜cÓ	"ð < dØ*.¯.©.Ó*:Ö; $—‘•Ð;ˆÐ;÷<çJ×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×J×JÕJùò <÷<ð <ús   D, D'·D,Ä'D,Ä,D5 c                  óv   — t        j                  t        «      5  t         d«       ddd«       y# 1 sw Y   yxY w)zDTest that the function raises a ValueError when input is not a list.zThis should be a listN)ÚpytestÚraisesÚ
+ValueErrorr   r   r    r   Ú/test_generate_log_raises_error_on_invalid_inputrB   "   s,   € ä	‰”zÓ	"ñ .ÜÐ,Ô-÷.÷ .ñ .ús   š/¯8 c                   óò  — t        g «      } t        | d«      5 }|j                  «       }ddd«       d}|k(  }|s™t         j                  d|fd||f«      dt
+        j                  «       v st         j                  |«      rt         j                  |«      ndt         j                  |«      d œz  }dd	|iz  }t        t         j                  |«      «      ‚dx}}t        j                  | «       y# 1 sw Y   ŒÅxY w)
+z@Test that passing an empty list still creates an empty log file.r4   NÚ r&   r(   Ú contentr)   zassert %(py5)sr   )
+r   r6   Úreadr   r-   r   r   r   r   r   r   r
+   r   ) r   r9   rE   r/   r   r0   r1   s           r   Ú&test_empty_log_list_creates_empty_filerG   '   sƒ   € ä˜BÓ€HÜ	
+ˆh˜Ó	ð  Ø—)‘)“+ˆ ÷ç×××××××××××××××××××ÕÜ‡IIˆhÕ÷ ð ús
+   ˜C-Ã-C6 )Úbuiltinsr   Ú_pytest.assertion.rewriteÚ	assertionÚ rewriter   r
+   r?   r   r   Ú fixturer	   r   r#   r2   r=   rB   rG   r   r    r   ú<module>rM      sa   ð÷ „ ƒ	Û 
+Ý Ý %à ‡ñ5ó ð5ð ‡ñó ðòJò\ò
+Kò.ó
+r    
